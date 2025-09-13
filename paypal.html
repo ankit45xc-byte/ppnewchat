@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PayPal Support — Click to Call (Student Project)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slide-up { from { transform: translateY(24px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+    .animate-slide-up { animation: slide-up .5s ease-out both; }
+    .ios-backdrop { backdrop-filter: blur(8px); }
+    body {
+      background: linear-gradient(180deg, #0070BA 0%, #1546A0 50%, #E6F0FA 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-gray-900 flex flex-col items-center p-0 font-[system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif]">
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="h-10" />
+      <h1 class="text-xl font-bold text-blue-700">PayPal Support</h1>
+    </div>
+    <nav class="hidden sm:flex gap-6 text-sm font-medium text-gray-600">
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="#faq" class="hover:text-blue-600">FAQ</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </header>
+
+  <main class="w-full max-w-5xl relative mt-6" id="app">
+    <!-- Hero Section -->
+    <section class="w-full rounded-3xl overflow-hidden shadow-xl bg-white flex flex-col items-center py-10">
+      <img src="https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg" alt="PayPal Banner" class="h-12 mb-4" />
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-blue-700">Click to Call Support</h2>
+      <p class="mt-2 text-gray-600 max-w-prose text-center px-6">
+        Connect instantly with PayPal’s Support & Customer Service. Simply tap the button below to call our official support line.
+      </p>
+    </section>
+
+    <!-- Call Card -->
+    <section class="mt-6 bg-white rounded-3xl shadow-2xl ring-1 ring-blue-200 overflow-hidden">
+      <div class="p-8 sm:p-10 grid gap-10">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">PayPal Support Line</label>
+          <div class="mt-3 flex gap-3">
+            <input id="number" type="tel" inputmode="tel" value="+1-888-221-1161" readonly class="flex-1 rounded-2xl border border-gray-300 px-5 py-4 text-base bg-gray-50" />
+            <a id="callNow" href="tel:+18882211161" class="inline-flex items-center justify-center whitespace-nowrap rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300">
+              Call Now
+            </a>
+          </div>
+          <p class="mt-2 text-xs text-gray-500">On mobile, tapping <span class="font-medium">Call Now</span> opens the dialer instantly.</p>
+        </div>
+
+        <!-- Extras -->
+        <div class="grid gap-6 sm:grid-cols-3">
+          <a href="sms:+18882211161" class="rounded-2xl border border-gray-300 bg-white p-5 hover:bg-blue-50 transition shadow-sm flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="SMS Icon" class="h-10 mb-2" />
+            <div class="text-sm font-semibold text-blue-700">Text (SMS)</div>
+            <div class="text-xs text-gray-500">Send a quick message</div>
+          </a>
+          <a href="mailto:support@paypal.com" class="rounded-2xl border border-gray-300 bg-white p-5 hover:bg-blue-50 transition shadow-sm flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" class="h-10 mb-2" />
+            <div class="text-sm font-semibold text-blue-700">Email Support</div>
+            <div class="text-xs text-gray-500">support@paypal.com</div>
+          </a>
+          <a id="saveVcf" href="#" class="rounded-2xl border border-gray-300 bg-white p-5 hover:bg-blue-50 transition shadow-sm flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Contact Icon" class="h-10 mb-2" />
+            <div class="text-sm font-semibold text-blue-700">Save Contact</div>
+            <div class="text-xs text-gray-500">Download PayPal Support vCard</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extended Content -->
+    <section class="mt-10 bg-white rounded-3xl shadow-lg p-8 sm:p-10 space-y-10">
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Support Categories</h2>
+        <ul class="grid sm:grid-cols-2 gap-6">
+          <li class="p-4 border rounded-xl hover:bg-blue-50">
+            <h3 class="font-semibold">Payments & Transfers</h3>
+            <p class="text-sm text-gray-600">Help with sending or receiving money, refund requests, and transaction errors.</p>
+          </li>
+          <li class="p-4 border rounded-xl hover:bg-blue-50">
+            <h3 class="font-semibold">Account & Login</h3>
+            <p class="text-sm text-gray-600">Support for password resets, account recovery, and updating personal information.</p>
+          </li>
+          <li class="p-4 border rounded-xl hover:bg-blue-50">
+            <h3 class="font-semibold">Fraud & Security</h3>
+            <p class="text-sm text-gray-600">Report suspicious activity, phishing attempts, or unauthorized transactions.</p>
+          </li>
+          <li class="p-4 border rounded-xl hover:bg-blue-50">
+            <h3 class="font-semibold">Business Support</h3>
+            <p class="text-sm text-gray-600">Get help with merchant accounts, invoicing, subscriptions, and integrations.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Troubleshooting Guides</h2>
+        <div class="space-y-4">
+          <div class="p-4 border rounded-xl bg-gray-50">
+            <h3 class="font-semibold">Can’t Log In</h3>
+            <p class="text-sm">Try resetting your password using the “Forgot Password” option. If you still can’t access, call support for verification.</p>
+          </div>
+          <div class="p-4 border rounded-xl bg-gray-50">
+            <h3 class="font-semibold">Dispute a Payment</h3>
+            <p class="text-sm">Open the Resolution Center in your account to file a dispute. Call support for guidance if needed.</p>
+          </div>
+          <div class="p-4 border rounded-xl bg-gray-50">
+            <h3 class="font-semibold">Payment on Hold</h3>
+            <p class="text-sm">Holds are common for new accounts. Confirm delivery or request release through support.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Customer Stories</h2>
+        <p class="text-sm text-gray-600">“Sarah resolved her payment hold in minutes by calling PayPal Support.”</p>
+        <p class="text-sm text-gray-600">“David recovered access to his account after forgetting his password, thanks to step-by-step help.”</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Helpful Resources</h2>
+        <ul class="list-disc pl-5 text-sm text-gray-600">
+          <li>Resolution Center</li>
+          <li>PayPal Community Forum</li>
+          <li>Help Articles & Guides</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Security Awareness</h2>
+        <p class="text-sm text-gray-600">Be cautious of phishing attempts. PayPal will never ask for your password or OTP over email. Always check the URL before logging in.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-blue-700 mb-4">Global Availability</h2>
+        <p class="text-sm text-gray-600">PayPal support is available worldwide, with 24/7 coverage in major regions and multilingual assistance in over 10 languages.</p>
+      </div>
+    </section>
+
+    <footer class="mt-10 bg-white rounded-t-2xl shadow-inner w-full p-8 grid sm:grid-cols-3 gap-8 text-sm text-gray-600">
+      <div>
+        <h3 class="font-semibold mb-2">About</h3>
+        <ul class="space-y-1">
+          <li>Company Info</li>
+          <li>Careers</li>
+          <li>Newsroom</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Support</h3>
+        <ul class="space-y-1">
+          <li>Help Center</li>
+          <li>Resolution Center</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Legal</h3>
+        <ul class="space-y-1">
+          <li>Privacy Policy</li>
+          <li>User Agreement</li>
+          <li>Cookies</li>
+        </ul>
+      </div>
+      <div class="sm:col-span-3 text-center text-xs text-gray-500 mt-6">© <span id="year"></span> Student Project. PayPal and the PayPal logo are trademarks of PayPal Holdings, Inc.</div>
+    </footer>
+
+    <!-- Auto Popup styled like iPhone AirPods popup -->
+    <div id="popupOverlay" class="fixed inset-0 hidden items-end justify-center bg-black/40 ios-backdrop z-50">
+      <div class="bg-white rounded-3xl shadow-2xl p-6 w-80 mb-10 animate-slide-up">
+        <div class="flex justify-between items-center">
+          <h2 class="text-lg font-bold text-blue-700">PayPal Support</h2>
+          <button id="closePopup" class="text-gray-400 hover:text-gray-600" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <p class="mt-2 text-gray-600 text-sm">Would you like to call support now?</p>
+        <div class="mt-4 flex flex-col gap-3">
+          <a id="popupCall" href="tel:+18882211161" class="rounded-2xl bg-blue-600 text-white text-center py-3 font-semibold shadow-md hover:shadow-lg">Call +1-888-221-1161</a>
+          <button id="laterBtn" class="rounded-2xl border border-gray-300 py-3 text-sm hover:bg-gray-50">Maybe Later</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const number = "+1-888-221-1161";
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // vCard download
+    document.getElementById('saveVcf').addEventListener('click', (e) => {
+      e.preventDefault();
+      const vcard = `BEGIN:VCARD\\nVERSION:3.0\\nN:Support;PayPal;;;\\nFN:PayPal Support\\nTEL;TYPE=WORK,VOICE:${number}\\nORG:PayPal\\nEND:VCARD`;
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'paypal-contact.vcf';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Popup logic
+    const popupOverlay = document.getElementById('popupOverlay');
+    const closePopup = document.getElementById('closePopup');
+    const laterBtn = document.getElementById('laterBtn');
+
+    function showPopup() {
+      popupOverlay.classList.remove('hidden');
+      popupOverlay.classList.add('flex');
+    }
+    function hidePopup() {
+      popupOverlay.classList.add('hidden');
+      popupOverlay.classList.remove('flex');
+    }
+
+    closePopup.addEventListener('click', hidePopup);
+    laterBtn.addEventListener('click', hidePopup);
+
+    setTimeout(showPopup, 2000);
+  </script>
+</body>
+</html>
